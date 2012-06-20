@@ -23,6 +23,7 @@ namespace NServiceLocator
 	/// <summary>
 	/// 	Responsible for defining the interface for types providing service-location functionality.
 	/// </summary>
+	/// <typeparam name="TActivationContext">The type of object used within the BindToMethod method argument. This is the type used  For Ninject this would be be Ninject.Activation.IContext.</typeparam>
 	public interface IServiceLocator<out TActivationContext>
 	{
 		void BindToSelf(Type obj);
